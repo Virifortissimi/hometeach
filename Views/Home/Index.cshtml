@@ -1,0 +1,212 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+@*@section Styles {
+    <link href="@Url.Content("~/css/main.css")" rel="stylesheet" type="text/css" />
+}*@
+
+<header style="background-image: url('@Url.Content("~/img/hero.png")'); width: 100%; height: 92vh; background-size: cover; ">
+    <div class="hero">
+        <div class="container">
+            <div class="hero-info">
+                <h1 class="hero-info__text text-uppercase heading-1">
+                    acquire <br />
+                    knowledge <br />
+                    at your <br />
+                    convenience
+                </h1>
+                <div>
+                    @if (User.Identity.IsAuthenticated)
+                    {
+                        <a asp-controller="Teacher" asp-action="List" class="hero-info__btn btn text-uppercase">Request for a teacher</a>
+                    }
+                    else
+                    {
+                        <a asp-controller="Accounts" asp-action="Login" class="hero-info__btn btn text-uppercase">Request for a teacher</a>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<main>
+    <section id="features">
+        <div class="container">
+            <h2 class="heading-2 text-center px-hg">Popular Subjects</h2>
+            <div class="features-subject">
+                <div class="feature feature-1">
+                    <div class="subject" style="background-image: url('@Url.Content("~/img/mathematics.png")');"></div>
+                    <p class="text-capitalize text-center">Mathematics</p>
+                </div>
+                <div class="feature feature-2">
+                    <div class="subject" style="background-image: url('@Url.Content("~/img/englishlanguage.jpg")');"></div>
+                    <p class="text-capitalize text-center">English</p>
+                </div>
+                <div class="feature feature-3">
+                    <div class="subject" style="background-image: url('@Url.Content("~/img/biology.png")');"></div>
+                    <p class="text-capitalize text-center">Biology</p>
+                </div>
+                <div class="feature feature-4">
+                    <div class="subject" style="background-image: url('@Url.Content("~/img/chemistry.png")');"></div>
+                    <p class="text-capitalize text-center">Chemistry</p>
+                </div>
+                <div class="feature feature-5">
+                    <div class="subject" style="background-image: url('@Url.Content("~/img/physics.png")');"></div>
+                    <p class="text-capitalize text-center">Physics</p>
+                </div>
+                <div class="feature feature-6">
+                    <div class="subject" style="background-image: url('@Url.Content("~/img/history.png")');"></div>
+                    <p class="text-capitalize text-center">History</p>
+                </div>
+                <div class="feature feature-7">
+                    <div class="subject" style="background-image: url('@Url.Content("~/img/engineering.png")');"></div>
+                    <p class="text-capitalize text-center">Engineering</p>
+                </div>
+                <div class="feature feature-8">
+                    <div class="subject" style="background-image: url('@Url.Content("~/img/geography.jpg")');"></div>
+                    <p class="text-capitalize text-center">Geography</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="how-it-works">
+        <div class="container">
+            <h2 class="text-capitalize text-center heading-2 px-hg">How it works</h2>
+            <div class="process">
+                <div class="step">
+                    <div class="circle">
+                        <p>1</p>
+                    </div>
+                    <p class="text-capitalize text-center">login</p>
+                </div>
+                <div class="step">
+                    <div class="circle">
+                        <p>2</p>
+                    </div>
+                    <p class="text-capitalize text-center">find teacher</p>
+                </div>
+                <div class="step">
+                    <div class="circle">
+                        <p>3</p>
+                    </div>
+                    <p class="text-capitalize text-center">choose teacher</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="faq">
+        <div class="container">
+            <h2 class="text-capitalize text-center heading-2 px-hg">Frequently ask questions</h2>
+            <div class="questions">
+                <div>
+                    <a href="#content-1" class="accordion-toggle">Why use Hometeach <img src="~/img/dropdown.svg" alt="dropdown"></a>
+                    <div class="accordion-content" id="content-1">
+                        With HomeTeach,you get the best tutor nearest to you, that your child needs from the comfort of your home and you
+                        never have to worry about driving to a tutoring center or anywhere. You constantly communicate with tutors and review feedback.
+                        Our platform is very secure because we ensure you find the perfect tutor for your wards because we usually do 
+                        extreme background checks on all our tutors.
+                    </div>
+                </div>
+                <div>
+                    <a href="#content-2" class="accordion-toggle">Do you provide online classes  <img src="~/img/dropdown.svg" alt="dropdown"></a>
+                    <div class="accordion-content" id="content-2">
+                        No(in view), our classes are offline for now but we will be integrating other online platform 
+                        in the future to be able to have online classes. But we provide our physical classes which is
+                        done by assigning the best tutor nearest to your location.
+                    </div>
+                </div>
+                <div>
+                    <a href="#content-3" class="accordion-toggle">How do you charge <img src="~/img/dropdown.svg" alt="dropdown"></a>
+                    <div class="accordion-content" id="content-3">
+                        Our custom Classes,which is usually prepaid and the selection of subjects  and plans  plays into a lot
+                        of factors as to the type of request you want which is why we have in-house packages with their prices
+                        to help in the selection.
+                    </div>
+                </div>
+                <div>
+                    <a href="#content-4" class="accordion-toggle">How trusted are your teachers <img src="~/img/dropdown.svg" alt="dropdown"></a>
+                    <div class="accordion-content" id="content-4">
+                        Our tutors are 100% trusted because we usually perform a series of screening on each of the tutors during the
+                        selection stage, and also we perform some background checks on the tutors even after passing the screening 
+                        test to ensure they are who they claim they are .
+                    </div>
+                </div>
+                <div>
+                    <a href="#content-5" class="accordion-toggle">What classes do you teach  <img src="~/img/dropdown.svg" alt="dropdown"></a>
+                    <div class="accordion-content" id="content-5">
+                        Usually students between Primary 3 - JSS 3 for all  subjects . which is always one-on-one physical 
+                        interactive sessions within the parents home, affording  the child  the opportunity to get a quality learning 
+                        experience at ease.
+                    </div>
+                </div>
+                <div>
+                    <a href="#content-6" class="accordion-toggle">Do you provide free classes <img src="~/img/dropdown.svg" alt="dropdown"></a>
+                    <div class="accordion-content" id="content-6">
+                        Yes. For free online classes for students in Primary and secondary schools in Nigeria, watchout for our Instagram 
+                        live sessions held once a week on our instagram account Also our plans are very reasonable and affordable 
+                        to everyone because it is prepaid and you are allowed to choose which plan best fits your budget.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+    <section id="request-a-teacher">
+        <div class="request-a-teacher">
+            <div class="container">
+                <div class="request-a-teacher__info">
+                    <div>
+
+                        <h3>
+                            Need a teacher for your kids?
+                        </h3>
+                        <p>
+                            Get a teacher you can trust
+                        </p>
+                        <p>
+                            Make your child grow in confidence
+                        </p>
+                        <p>Learn at your convenience</p>
+                        <p>Make the choice of teacher you want yourself</p>
+                        <div class="px-md">
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                <a asp-controller="Teacher" asp-action="List" class="hero-info__btn btn text-uppercase">Request for a teacher</a>
+                            }
+                            else
+                            {
+                                <a asp-controller="Accounts" asp-action="Login" class="hero-info__btn btn text-uppercase">Request for a teacher</a>
+                            }
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="request-a-teacher__img" style="background-image: url('@Url.Content("~/img/two.png")');">
+
+        </div>
+    </section>
+    <section id="experienced-teacher">
+        <div class="container text-center">
+            <h2 class="text-capitalize heading-2 px-hg">experience teacher?</h2>
+            <div class="px-hg">
+                @if (User.Identity.IsAuthenticated)
+                {
+                    <a asp-controller="Teacher" asp-action="Insert" class="btn btn-teach">Apply to teach</a>
+                }
+                else
+                {
+                    <a asp-controller="Accounts" asp-action="Login" class="btn btn-teach">Apply to teach</a>
+                }
+            </div>
+        </div>
+    </section>
+</main>
+
+
+
+@section JavaScript
+{
+    <script defer type="text/javascript" src="@Url.Content("~/js/app.js")"></script>
+}

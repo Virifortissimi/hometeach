@@ -1,0 +1,38 @@
+﻿@model eagle_hometeach.src.Models.TeacherDetail
+
+@{
+    ViewData["Title"] = "Home Teach | Sign Up";
+}
+
+@section Styles {
+    <link href="@Url.Content("~/css/parent-view-details.css")" rel="stylesheet" type="text/css" />
+}
+
+
+
+
+<div class="container">
+    <h3>@Model.FullName</h3>
+    <div class="card">
+        <div class="image-container">
+            <img src="@Model.PictureLink" alt="Teacher Image">
+        </div>
+        <div class="skills">
+            <p>@Model.YearsOfExperience years teaching experience</p>
+            <hr />
+            <div class="subjects">
+                <span>@Model.Subjects</span>
+            </div>
+        </div>
+        <div class="contact">
+            <p>To discuss suitable arrangements, click your preferred option.</p>
+            <a href="tel:+@Model.Phone">Call</a>
+            @*<a href="mailto:">Email</a>*@
+        </div>
+    </div>
+    <div class="description">
+        <h4>Description</h4>
+        <hr />
+        <p>@Model.Description</p>
+    </div>
+</div>

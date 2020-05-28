@@ -1,0 +1,32 @@
+﻿@model List<eagle_hometeach.src.Models.TeacherDetail>
+
+@{
+    ViewData["Title"] = "Home Teach | Sign Up";
+}
+
+@section Styles {
+    <link href="@Url.Content("~/css/list.css")" rel="stylesheet" type="text/css" />
+}
+
+    <div class="wrapper">
+        @foreach (var item in Model)
+        {
+            <div class="parent">
+                <div class="teacher-section">
+                    <div class="teacher-top-section">
+                        <img src="@item.PictureLink" alt="" class="teacher-image" />
+                        <div class="name-experience">
+                            <h4>@item.FullName</h4>
+                            <p><span>@item.YearsOfExperience</span> Years Experience</p>
+                            <p class="teacher-location">@item.State</p>
+                        </div>
+                    </div>
+                    <hr />
+                    <div class="teacher-bottom-section">
+                        <h4>@item.Subjects</h4>
+                        <a asp-controller="Teacher" asp-action="SeeProfile" asp-route-id="@item.TeacherID">View Profile</a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>

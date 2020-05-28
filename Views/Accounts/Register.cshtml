@@ -1,0 +1,47 @@
+﻿@model eagle_hometeach.src.Models.RequestModels.CreateUserRequestModels
+
+@{
+    ViewData["Title"] = "Home Teach | Sign Up";
+}
+
+@section Styles {
+    <link href="@Url.Content("~/css/signup.css")" rel="stylesheet" type="text/css" />
+}
+
+
+<div class="container signup-container">
+    <div class="form-container">
+        <h2 style="color: #41b5fc; font-size: 32px; position: relative; margin-top: 30px; margin-left: 23px; margin-bottom: -24px;">Register</h2>
+        <form asp-controller="Accounts" asp-action="Register" class="signup-form" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="email">
+                <i class="fas fa-envelope"></i>
+                <input type="email" asp-for="Email" placeholder="Email" />
+            </div>
+            <div class="password">
+                <i class="fas fa-lock"></i>
+                <input type="password" asp-for="Password" placeholder="Password" />
+                <i class="fas fa-eye"></i>
+            </div>
+            <div class="password">
+                <i class="fas fa-lock"></i>
+                <input type="password" asp-for="ConfirmPassword" placeholder="Confirm Password" />
+                <i class="fas fa-eye"></i>
+            </div>
+            <input type="submit" value="Register" />
+            <p>Already have an account? <a asp-controller="Accounts" asp-action="Login">Login</a></p>
+        </form>
+    </div>
+</div>
+
+
+@section JavaScript
+{
+    <script defer type="text/javascript" src="@Url.Content("~/js/signup.js")"></script>
+}
+
+
+
+
+
+

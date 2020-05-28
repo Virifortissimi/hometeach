@@ -1,0 +1,69 @@
+﻿@model eagle_hometeach.src.Models.TeacherDetail
+
+@{
+    ViewData["Title"] = "Home Teach | Sign Up";
+}
+
+@section Styles {
+    @*<link href="@Url.Content("~/css/header.css")" rel="stylesheet" type="text/css" />*@
+    <link href="@Url.Content("~/css/teacher-entry.css")" rel="stylesheet" type="text/css" />
+}
+
+
+
+<div class="insert-container">
+    <div class="form-container">
+        <div class="heading">
+            <h5>Dear Teacher</h5>
+            <h3>Tell us a bit about you</h3>
+        </div>
+        <form asp-controller="Teacher" asp-action="Insert" class="form">
+            @if (ViewBag.Message != null)
+            {
+                <h3 class="viewbagerror">@ViewBag.Message</h3>
+            }
+            else if (ViewBag.SuccessMessage != null)
+            {
+                <h3 class="viewbagsuccess">@ViewBag.SuccessMessage</h3>
+            }
+            else
+            {
+                <div asp-validation-summary="All"></div>
+            }
+            <div class="image">
+                <input type="text" asp-for="PictureLink" placeholder="Image Link" />
+                <p class="message">Plese upload an image of yourself on an image sharing website like cloudinary, google drive or imgbb, and drop the link here.</p>
+            </div>
+            <div class="fname">
+                <input type="text" asp-for="FullName" placeholder="Full Name" />
+            </div>
+            <div class="fname">
+                <input type="text" asp-for="State" placeholder="State Of Residence" />
+            </div>
+            <div class="expertise-years">
+                <input type="number" asp-for="YearsOfExperience" placeholder="Years of Expertise" />
+            </div>
+            <div class="subjects">
+                <input type="text" asp-for="Subjects" placeholder="Subjects Taught" />
+                <p class="message">Type in subjects you are willing to teach separated by a comma</p>
+            </div>
+            <div class="subjects">
+                <input type="text" asp-for="Phone" placeholder="Phone Number" />
+            </div>
+            <div class="about">
+                <textarea asp-for="Description" cols="30" rows="10" placeholder="Description"></textarea>
+            </div>
+            <input type="submit" id="submit" value="Save" />
+        </form>
+    </div>
+    <div class="image-container">
+        <div class="side-images">
+            <div class="image-1">
+                <img src="~/img/iphone-notebook-pen-working-34088.jpg" alt="iPhone-Image">
+            </div>
+            <div class="image-2">
+                <img src="~/img/mother-helping-her-daughter-with-homework-4260475.jpg" alt="Mother and Daughter">
+            </div>
+        </div>
+    </div>
+</div>

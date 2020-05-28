@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.form-container {
+  background-color: #f2fbff;
+}
+
+/*.form-container .heading {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid #cfd6df;
+}
+
+.form-container .heading > div {
+  flex: 50%;
+  text-align: center;
+  padding: 1rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container .heading .parent {
+  background-color: #41b5fc;
+  color: white;
+}
+
+.form-container .heading .teacher {
+  background-color: white;
+  color: #41b5fc;
+}*/
+
+input:not([type="submit"]) {
+  width: 100%;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #41b5fc;
+  margin-bottom: 0.5rem;
+}
+
+.email {
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.password {
+  margin: 1.5rem 0;
+  position: relative;
+}
+
+input[type="password"], input[type="text"] {
+  margin-top: 1rem;
+}
+
+.forgot-password {
+  text-align: right;
+}
+
+input[type="submit"] {
+  padding: 0.75rem 1rem;
+  width: 160px;
+  background-color: #41b5fc;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  background-color: #2a729e;
+}
+
+form {
+  padding: 10% 5%;
+}
+
+form a {
+  text-decoration: none;
+  color: #41b5fc;
+}
+
+form i {
+  position: absolute;
+}
+
+i.fa-lock, i.fa-envelope {
+  left: 11px;
+}
+
+i.fa-eye {
+  right: 10px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+i.fa-eye:hover {
+  color: black;
+}
+
+.email i {
+  top: 13px;
+}
+
+.password i {
+  top: 28px;
+}
+
+@media (min-width: 520px) {
+  .login-container {
+    padding: 0 10%;
+  }
+}
+
+@media (min-width: 760px) {
+  .login-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-container {
+    width: 500px;
+  }
+}
+main.pb-3 {
+    margin-top: 110px;
+    margin-bottom: 120px;
+}
+.nav-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+}
+.validation-summary-errors li {
+    list-style-type: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: red;
+    transition: 1s;
+}
+.form-container > h2 {
+    color: #41b5fc;
+    font-size: 32px;
+    position: relative;
+    margin-top: 30px;
+    margin-left: 23px;
+    margin-bottom: -24px;
+}

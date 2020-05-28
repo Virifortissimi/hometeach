@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+
+* {
+    font-family: 'Roboto', sans-serif;
+}
+
+.form-container {
+  background-color: #f2fbff;
+}
+
+input:not([type="submit"]) {
+  width: 100%;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  outline: none;
+  border: 1px solid #41b5fc;
+}
+
+.email {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.password {
+  margin: 2rem 0;
+  position: relative;
+}
+
+input[type="submit"] {
+  padding: 0.75rem 1rem;
+  width: 160px;
+  background-color: #41b5fc;
+  border: none;
+  border-radius: 0.5rem;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type="submit"]:hover {
+  background-color: #2a729e;
+}
+
+form {
+  padding: 10% 5%;
+}
+
+form a {
+  text-decoration: none;
+  color: #41b5fc;
+}
+
+.invalid-feedback {
+  color: red;
+  display: none;
+  font-size: 0.8125rem;
+}
+
+.show-error .invalid-feedback {
+  display: block;
+}
+
+form i {
+  position: absolute;
+  top: 13px;
+}
+
+i.fa-lock, i.fa-envelope {
+  left: 11px;
+}
+
+i.fa-eye {
+  right: 10px;
+  color: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+}
+
+i.fa-eye:hover {
+  color: black;
+}
+
+@media (min-width: 520px) {
+  .signup-container {
+    padding: 0 10%;
+  }
+}
+
+@media (min-width: 760px) {
+  .signup-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-container {
+    width: 500px;
+  }
+}
+main.pb-3 {
+    margin-top: 110px;
+    margin-bottom: 110px;
+}
+.validation-summary-errors li {
+    list-style-type: none;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    color: red;
+    transition: 1s;
+}
